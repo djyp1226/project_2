@@ -75,6 +75,11 @@ h4 {
 
 #page2 {
   font-size: 4.1667vw; }
+  #page2 .fade {
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
 
 #page2 .txtwrap {
   padding: 0 4.1667vw; }
@@ -179,8 +184,9 @@ h4 {
     stroke: #4A9EC0;
     stroke-dasharray: 917;
     stroke-dashoffset: 0;
-    fill: transparent;
-    animation: dash-ani 2s; }
+    fill: transparent; }
+    .blue_line path.on {
+      animation: dash-ani 2s; }
 @keyframes dash-ani {
   from {
     stroke-dashoffset: 917; }
