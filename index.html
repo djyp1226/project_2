@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOTERM</title>
+  <!-- 아이폰 아이콘 -->
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <!-- 안드로이드 아이콘 -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+
+  <!-- css 연결 -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- <link rel = "stylesheet" href="assets/css/sub.css"> -->
+
+  <!-- 스크립트 연결 -->
+  <script src="assets/js/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- <script src="assets/js/sub.js"></script> -->
+</head>
+
+<body>
+  <!-- overflow: hidden 우측에 위치하는 네비게이션 -->
+  <div id="wrap">
+    <header id="header">
+      <h1 class="logo">
+        <a href="index.html" aria-label="비오템">
+          <img src="assets/images/common/logo_white.svg" alt="하얀색 글자의 BIOTERM">
+        </a>
+      </h1>
+      <!-- 햄버거 버튼 -->
+      <button type="button" class="btn_menu">
+        <!-- 활성화 되면 .active 추가됨 -->
+        <span class="blind-b">메뉴 열기</span>
+        <span class="line top"></span>
+        <span class="line mid"></span>
+        <span class="line btm"></span>
+      </button>
+      <!-- 네비게이션 -->
+      <!-- #gnb는 modal 형식을 사용
+      1) 열기 버튼을 클릭하면 #gnb 첫번째 a에 포커스 강제 이동
+      2) 닫기 버튼을 누르기 전까지는 모달내부에서만 포커스 회전
+      3) 닫기 버튼을 처음의 위치(열기버튼)로 포커스 강제 이동 -->
+      <nav id="gnb">
+        <img src="assets/images/nav_line.svg" alt="파란색의 물결 모양">
+        <ul>
+          <li class="gnb1"><a href="story/story.html" data-link="first">BIOTERM</a></li>
+          <li class="gnb2">
+            <a href="">PRODUCT</a>
+            <ul>
+              <li><a href="">SKIN</a></li>
+              <li><a href="">BODY</a></li>
+            </ul>
+          </li>
+          <li class="gnb3"><a href="">EVENT</a></li>
+          <li class="gnb4"><a href="">SHOP</a></li>
+          <li class="gnb5"><a href="" data-link="last">SERVICE</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 컨텐츠 시작 -->
+    <section id="content" role="main">
+      <h2 class="blind-b">비오템 모바일 홈페이지 메인</h2>
+      <article class="main_visual">
+        <h2 class="blind-b">비오템 제품 광고</h2>
+        <!-- ::before -->
+        <div class="intro bgcover">
+          <!-- <a href="product/product.html"> -->
+          <div class="txtwrap clearfix">
+            <p>생기있고 탄탄한 피부</p>
+            <strong>파란병으로 시작하는<br>안티-에이징</strong>
+            <div class="undertxt">
+              <a href="product/product.html" class="intro_go">NEW 라이프 플랑크톤 엘릭시어 안티-에이징세럼<img
+                  src="assets/images/icon/main_arrow_1.svg" alt="하얀색의 페이지 이동 아이콘"></a>
+            </div>
+          </div>
+          <div id="bubblebox">
+            <a href="product/product.html">
+              <canvas id="bubbles"></canvas>
+              <script src="assets/js/bubbles.js"></script>
+            </a>
+          </div>
+          <span class="next"></span>
+        </div>
+      </article>
+
+      <!-- 인덱스best 시작 -->
+      <article class="best_cnt">
+        <h3 class="sub_tit fade up">B E S T</h3>
+        <div class="swiper-container best3 center">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/images/main/best_1_lifeessense.png" alt="길다란 파란색 병의 은색 뚜껑 제품" class="best_pd"
+                srcset="assets/images/main/best_1_lifeessense.png 2x, assets/images/main/best_1_lifeessense.png 3x">
+              <strong>라이프 플랑크톤 온천수 에센스 125ml</strong>
+              <p>65,000 원대</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/main/best_2_aquacream.png" alt="넙적한 초록색 통의 하얀 뚜껑 제품" class="best_pd"
+                srcset="assets/images/main/best_2_aquacream.png 2x, assets/images/main/best_2_aquacream.png 3x">
+              <strong>아쿠아수르스 수분 젤 크림 50ml</strong>
+              <p>54,000 원대</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/main/best_3_momcream.png" alt="새하얀 제품의 바디 로션 제품" class="best_pd"
+                srcset="assets/images/main/best_3_momcream.png 2x, assets/images/main/best_3_momcream.png 3x">
+              <strong>비오베르제뛰르 예비맘 크림 400ml</strong>
+              <p>89,000 원대</p>
+            </div>
+          </div>
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+          <div class="controlbox">
+            <!-- fraction type -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"><img src="assets/images/icon/main_best_arrow_1.svg" alt="이전 슬라이더 보기"></div>
+            <div class="swiper-button-next"><img src="assets/images/icon/main_best_arrow_2.svg" alt="다음 슬라이더 보기"></div>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- 인덱스new시작 -->
+      <article class="new_cnt ">
+        <div class="bg_green">
+          <h3 class="sub_tit new_tit fade up">N E W</h3>
+          <div class="swiper-container new3 fade down">
+            <!-- 슬라이더 상세 내용 -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="product/product.html">
+                  <img src="assets/images/main/new_1.png"
+                    alt="피부에서 광채가 나는 배우 한소희 씨가 비오템 라이프 플랑크톤 엘릭시어 안티에이징 세럼을 얼굴에 갖다대고 있다"
+                    srcset="assets/images/main/new_1_x2.png 2x, assets/images/main/new_1_x3.png 3x">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <img src="assets/images/main/new_2.png" alt="깊은 바다를 연상시키는 푸른 갯벌 위에 비오템 라이프 플랑크톤 마일드 크리미 필링이 놓여져있다"
+                    srcset="assets/images/main/new_2_x2.png 2x, assets/images/main/new_2_x3.png 3x">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <img src="assets/images/main/new_3.png" alt="고급지게 흘러내리는 노란 벨벳같은 오일의 배경과 라이프 플랑크톤 멀티 바디오일"
+                    srcset="assets/images/main/new_3_x2.png 2x, assets/images/main/new_3_x3.png 3x"> 
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </article>
+      <!-- 인덱스 파란 버튼 -->
+      <article class="blue_btn fade right">
+        <h3 class="blind-b">이벤트, 서비스 메뉴 바로가기</h3>
+        <ul>
+          <li><a href="">Event<img src="assets/images/icon/main_blue_btn.svg" alt="푸른 색의 수평으로 긴 동그라미 원형"> </a></li>
+          <li><a href="">Service<img src="assets/images/icon/main_blue_btn.svg" alt="푸른 색의 수평으로 긴 동그라미 원형"> </a></li>
+        </ul>
+      </article>
+
+      <!-- 인덱스 sns -->
+      <article class="follow fade down">
+        <h3 class="sub_tit">Follow Us</h3>
+        <!-- 긴선 가상요소 -->
+        <ul class="sns_icon">
+          <li>
+            <a href=""><img src="assets/images/icon/main_1_youtube.svg" alt="둥근 네모 안에 삼각형 재생 버튼"> 
+            </a>
+          </li>
+          <li>
+            <a href=""><img src="assets/images/icon/main_2_facebook.svg" alt="검정색 글씨의 f 글자"> 
+            </a>
+          </li>
+          <li>
+            <a href=""><img src="assets/images/icon/main_3_instagram.svg" alt="검정색의 카메라 모양"> 
+            </a>
+          </li>
+        </ul>
+        <div id="movie">
+          <iframe id="ytplayer" type="text/html" 
+            src="https://www.youtube.com/embed/c55Ttlt7X-0?controls=0&amp;start=1" 
+            allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"
+            title="생기 있고 탄탄한 한소희의 피부 비밀인 NEW 라이프 플랑크톤 엘릭시어 안티-에이징세럼">
+          </iframe>
+
+          <!--iframe{border: none;}
+        #movie{position:relative; width: 100%; height: 0; padding-bottom: 56.25%;}
+        /* 16:9= 100%:56.25 16:9=100:x% */
+        /* padding , margin 을 %로 선언하는 것은 부모의 가로크기를 기준으로 함 */
+        #movie iframe{position: absolute; top: 0;left: 0;width: 100%;height: 100%;}-->
+          <!-- frameborder="0" => css에서 border:none; 
+        접근성을 위해 추가 기능
+        title="영상 제목, 영상 내용을 간단히 소개"
+
+        #movie 태그의 크기 비율 = 16 : 9 
+        padding-bottom을 이용(%)해서 비율 지정 (부모의 가로 크기를 기준으로 함)
+        
+        autoplay 를 선언해도 음소거 상태가 아니면 자동실행은 차단됨
+        유튜브에서는 음소거를 mute=1-->
+
+        </div>
+      </article>
+    </section>
+
+    <!-- 푸터 시작 -->
+    <footer id="footer">
+      <div class="ft_area clearfix">
+        <ul class="ft_txt">
+          <li><a href="">회사소개</a></li>
+          <li class="ft_bold"><a href="">개인정보처리방침</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+        <a href="#" class="ft_logo">
+          <img src="assets/images/common/footer_logo.png" alt="하얀 물결 그림이 아래에 있는 BIOTERM 글씨"
+            srcset="assets/images/common/footer_logo_x2.png 2x, assets/images/common/footer_logo_x3.png 3x">
+        </a>
+        <address>
+          엘오케이(유)<br>
+          사업자번호 : 220-81-73483<br>
+          대표자 : 크리스티앙 마르코스 아르나이<br>
+          서울특별시 강남구 영동대로 517(삼성동) 아셈타워32층<br>
+          고객센터 : 080-022-3332
+        </address>
+        <p>Copyright&copy;biotherm All rights reserved.</p>
+        <ul class="ft_icon">
+          <li>
+            <a href=""><img src="assets/images/icon/ft_1_youtube.svg" alt="원 안의 둥근 네모 안에 삼각형 재생 버튼 모양">
+            </a>
+          </li>
+          <li>
+            <a href=""><img src="assets/images/icon/ft_2_facebook.svg" alt="원 안의 f 글자">
+            </a>
+          </li>
+          <li>
+            <a href=""><img src="assets/images/icon/ft_3_instagram.svg" alt="원 안의 카메라 모양">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

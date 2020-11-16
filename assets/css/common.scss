@@ -1,0 +1,179 @@
+@charset "utf-8";
+@import "_mixin","_var";
+
+@font-face {
+    font-family: NtSans;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../fonts/NotoSans-light.woff2") format("woff2"),
+        url("../fonts/NotoSans-light.woff") format("woff"),
+        url("../fonts/NotoSans-light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NtSans;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Regular.woff2") format("woff2"),
+        url("../fonts/NotoSans-Regular.woff") format("woff"),
+        url("../fonts/NotoSans-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: NtSans;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Medium.woff2") format("woff2"),
+        url("../fonts/NotoSans-Medium.woff") format("woff"),
+        url("../fonts/NotoSans-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: NtSans;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/NotoSans-Bold.woff2") format("woff2"),
+        url("../fonts/NotoSans-Bold.woff") format("woff"),
+        url("../fonts/NotoSans-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: adam;
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/adam-Medium.woff2") format("woff2"),
+        url("../fonts/adam-Medium.woff") format("woff"),
+        url("../fonts/adam-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: adam;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/Adam-Bold.woff2") format("woff2"),
+        url("../fonts/Adam-Bold.woff") format("woff"),
+        url("../fonts/Adam-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Audrey;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/Audrey-Normal.woff2") format("woff2"),
+        url("../fonts/Audrey-Normal.woff") format("woff"),
+        url("../fonts/Audrey-Normal.otf") format("opentype");
+}
+
+// tag reset
+body,h1,h2,h3,h4,h5,h6,ul,p,button{margin: 0;padding: 0;}
+h1,h2,h3,h4,h5,h6{font-size: 100%;}
+ul{list-style: none;}
+a:link,a:hover,a:visited,a:active{color: inherit; text-decoration: none;}
+
+img{vertical-align: top; border: none;}
+img{max-width: 100%;}
+address{font-style: normal;}
+button{border: none; background: none; cursor: pointer;}
+header, nav, section, article, figure, footer{display: block;}
+
+// common class
+.f_l{float: left;}
+.f_r{float: right;}
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.clearfix::after{content: "";display: block;clear: both;}
+.blind-b{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+.center{text-align: center;}
+
+// 본문 전체 공통 스타일
+body{font-family: NtSans; font-weight: 400;color: $navy; font-size: 4.444444444vw;}
+//white-space: nowrap;
+#wrap{overflow: hidden; min-width: 88.888888889vw;}
+
+.fade{
+    @include transition(all 1s);
+    opacity: 0;
+    // 수직은 translateY => 기준 아래는 +, 기준 위는 -
+    &.up{@include transform(translateY(11.1111vw));}
+    &.down{@include transform(translateY(-11.1111vw));}
+    // 수평은 translateX => 기준 오른쪽 +, 기준 왼쪽 -
+    &.left{@include transform(translateX(11.1111vw));}
+    &.right{@include transform(translateX(-11.1111vw));}
+  }
+  .fade.on{
+    opacity: 1;
+    &.up, &.down{@include transform(translateY(0px));}
+    &.left, &.right{@include transform(translateX(0px));}
+  }
+
+// header
+#header{
+    position: fixed;
+    top: 0vw;right: 0;width: 100%;height: 13.8889vw;z-index: 10000;
+    .line{position: absolute;}
+
+    // 햄버거
+    .btn_menu{position: absolute;
+        top: 4.1667vw; right: 8.3333vw; width: 6.9444vw; height: 5.8333vw; overflow: hidden; z-index: 1100; 
+        .line{ 
+// @include transition(all 0.5s);
+// @include radius(2.2222vw);
+            width: 100%;height: 0.5556vw;background: #ffffff;left: 0;
+        }
+        .top{top: 0.0000vw;}
+        .mid{top: 2.6389vw;}
+        .btm{top: 5.2778vw;}  
+        // active 상태
+    }
+    .btn_menu.active{
+        .line{background:$navy !important;}
+        .top{
+        @include transform(rotate(45deg)); @include transition(all 0.3s);
+        top: 2.7778vw;
+        }
+        .mid{left: 100%;}
+        .btm{
+        @include transform(rotate(-45deg)); @include transition(all 0.3s);
+        top: 2.7778vw;
+        }    
+    }
+}
+// 네비
+#gnb{display: none;
+    position: fixed; top: 0.0000vw; right: -77.7778vw;bottom: 0; overflow-y: auto; color: $navy; background: rgba(255, 255, 255, 0.99); 
+    width: 77.7778vw;
+    img{display: block; margin-top: 13.8889vw;}
+    >ul {padding-top: 13.8889vw;}
+        li a{display: block;position: relative;top: 0;left: 0; font-family: adam; font-weight: 500;font-size: 6.9444vw; letter-spacing: -10;padding: 0 8.3333vw;}
+        li+li{margin-top: 11.1111vw;}
+        .gnb2>a::before,.gnb2>a::after {content: ""; position: absolute;  top: calc(50%); right:8.3333vw; background: $navy; width: 6.9444vw;height: 0.2778vw;}
+        .gnb2>a::after{@include transform(rotate(90deg));@include transition(all 0.3s);}
+        .gnb2.on > a::after{@include transform(rotate(0deg)); @include transition(all 0.3s);}
+        ul li ul{margin-top: 8.3333vw; background: #f8f8f8;display: none; }
+        .gnb2>ul>li+li{margin-top: 2.7778vw;}
+        .gnb2>ul>li>a{font-size: 5.5556vw; padding: 4.1667vw 11.1111vw;}
+}
+
+// footer
+#footer{height: 111.1111vw; white-space: nowrap;
+    background: url("../images/common/footer_bg_opacity.svg")  no-repeat; background-size: cover; width: 100%; text-align: center; color: #ffffff; font-family: NtSans; font-weight: 400; margin-top: 20.8333vw;
+    width: 100%; height: 100%;
+    display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+    align-items:center; /* 위아래 기준 중앙정렬 */
+    justify-content:center;
+    .ft_area{padding: 23.6111vw 15.2778vw 5.5556vw;}
+    .ft_txt { 
+        .ft_bold{font-weight: 700;}
+        height: 5.5556vw; font-size: 3.6111vw;line-height: 5.5556vw; 
+        li{float: left;
+            +li{margin-left: 0.5556vw;}
+        }
+    }
+    .ft_logo {
+        display: block; 
+        img{margin: 11.111111111vw auto; width: 33.333333333vw;height: 13.333333333vw;}
+    }
+    address,p{font-size: 3.0556vw;}
+    p{margin: 2.777777778vw 0;}
+    .ft_icon{
+        margin: 6.9444vw 18.0556vw;
+        li{float: left; width: 8.3333vw;height: 8.3333vw;
+            +li{margin-left: 3.6111vw;}
+        }
+    }
+}

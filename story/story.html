@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+  <title> BIOTERM STORY </title>
+  <!-- 아이폰 아이콘 -->
+  <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+  <!-- 안드로이드 아이콘 -->
+  <link rel="shortcut icon" href="../assets/images/favicon.png">
+
+  <!-- css 연결 -->
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/sub.css">
+
+  <!-- 스크립트 연결 -->
+  <script src="../assets/js/jquery-1.12.4.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/story.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header" class="header2">
+      <div class="back_btn">
+        <a href="">
+          <img src="../assets/images/story/back_button.svg" alt="흰색의 뒤로가기 버튼">
+        </a>
+      </div>
+      <h1 class="logo">
+        <a href="../index.html" aria-label="비오템">
+          <img src="../assets/images/common/logo_white.svg" alt="하얀색 글자의 BIOTERM">
+        </a>
+      </h1>
+      <!-- 햄버거 버튼 -->
+      <button type="button" class="btn_menu">
+        <!-- 활성화 되면 .active 추가됨 -->
+        <span class="blind-b">메뉴 열기</span>
+        <span class="line top"></span>
+        <span class="line mid"></span>
+        <span class="line btm"></span>
+      </button>
+      <!-- 네비게이션 -->
+      <!-- #gnb는 modal 형식을 사용
+            1) 열기 버튼을 클릭하면 #gnb 첫번째 a에 포커스 강제 이동
+            2) 닫기 버튼을 누르기 전까지는 모달내부에서만 포커스 회전
+            3) 닫기 버튼을 처음의 위치(열기버튼)로 포커스 강제 이동 -->
+      <nav id="gnb">
+        <img src="../assets/images/nav_line.svg" alt="파란색의 물결 모양">
+        <ul>
+          <li class="gnb1"><a href="story.html" data-link="first">BIOTERM</a></li>
+          <li class="gnb2">
+            <a href="">PRODUCT</a>
+            <ul>
+              <li><a href="">SKIN</a></li>
+              <li><a href="">BODY</a></li>
+            </ul>
+          </li>
+          <li class="gnb3"><a href="">EVENT</a></li>
+          <li class="gnb4"><a href="">SHOP</a></li>
+          <li class="gnb5"><a href="" data-link="last">SERVICE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- story page1 -->
+  </div>
+  <section id="page2" class="story" role="main">
+    <div class="story_main">
+      <p class="story_txt1">물 속 신비한 생명력을 담은 비오템과 함께 </p>
+      <strong>더 당당하게! 더 생기있게! 더 건강하게!</strong>
+      <ul class="f_white">
+        <li>순수<br>플랑크톤<br>추출물</li>
+        <li>각종 올리고<br>미네랄 성분</li>
+      </ul>
+      <span class="st_plus"></span>
+      <p class="aqualong f_white ">AQUATIC BIODIVERSITY SKINCARE</p>
+    </div>
+    <!-- story page2 -->
+    <div class="storybox clearfix">
+      <h4 class="f_l txtwrap tit1952 fade down">1952's</h4>
+      <!-- 선 그리기 -->
+      <div class="txtwrap blue_line">
+        <svg id="layer" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359 617">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #4a9ec0;
+              }
+
+              .cls-2 {
+                fill: none;
+                stroke: #4a9ec0;
+                stroke-miterlimit: 10;
+              }
+            </style>
+          </defs>
+          <title>blue_line</title>
+          <circle class="cls-1" cx="9" cy="9" r="9" />
+          <circle class="cls-1" cx="350" cy="608" r="9" />
+          <path class="cls-2" d="M9,11V456.23s-4,36.18,34,36.18H317s34-3,34,27.14V610" transform="translate(-1 -2)" />
+        </svg>
+      </div>
+      <div class="txtwrap y1952">
+        <img class="story_jang fade right" src="../assets/images/story/story_jang.png" alt="검은색 점퍼를 입고 머리를 묶은 장이안 마리샬의 흑백 사진"
+          srcset="../assets/images/story/story_jang_x2.png 2x, ../assets/images/story/story_jang_x3.png 3x">
+        <h5 class="f_r txtwrap fade right">생물학자 장이안 마리샬</h5>
+        <!-- 가상요소 회색선 -->
+        <!-- nowtxt 회색배경 -->
+        <div class="bg_bubble">
+          <div class="txt1952 f_r txtwrap fade right">
+            피레네 산맥의 온천수에서 추출한 플랑크톤이<br>
+            피부와 유사한 구조를 지니고 있어<br>
+            <strong>피부 친화력</strong>이 높고<br>
+            <strong>풍부한 미네랄</strong>과<br>
+            <strong>비타민을 함유</strong>하는 것을 발견하여<br>
+            이를 스킨케어에 적용시켜<br>
+            비오템 브랜드를 탄생시켰습니다.
+          </div>
+        </div>
+      </div>
+      <!-- story page3 -->
+      <div class="nowbox">
+        <h4 class="f_r nowtit txtwrap fade left">now</h4>
+        <div class="nowtxt center">
+          현재 비오템은<br>
+          <strong>순수 플랑크톤 추출물</strong> 뿐만 아니라<br>
+          온천수, 빙하, 호수, 강 등<br>
+          <strong>전 세계의 물</strong>에서 추출해낸<br>
+          유효 성분을 바탕으로<br>
+          비오템만의 독자 기술로<br>
+          피부에 가장 효과적인 제품 개발을 위해<br>
+          노력하고 있습니다
+        </div>
+      </div>
+    </div>
+    <!-- 물방울 -->
+    <div class="water_drop">
+      <div class="wrapper">
+        <div class="wave_1 outer-shadow">
+          <div class="inner-shadow align-center"></div>
+        </div>
+        <div class="wave_2 outer-shadow align-center">
+          <div class="inner-shadow align-center"></div>
+        </div>
+        <div class="wave_3 outer-shadow align-center">
+          <div class="inner-shadow align-center"></div>
+        </div>
+        <div class="drop align-center"></div>
+      </div>
+    </div>
+  </section>
+    <!-- 푸터 시작 -->
+    <footer id="footer">
+      <div class="ft_area clearfix">
+        <ul class="ft_txt">
+          <li><a href="">회사소개</a></li>
+          <li class="ft_bold"><a href="">개인정보처리방침</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+        <a href="#" class="ft_logo">
+          <img src="../assets/images/common/footer_logo.png" alt="하얀 물결 그림이 아래에 있는 BIOTERM 글씨" srcset="../assets/images/common/footer_logo_x2.png 2x, ../assets/images/common/footer_logo_x3.png 3x">
+        </a>
+        <address>
+          엘오케이(유)<br>
+          사업자번호 : 220-81-73483<br>
+          대표자 : 크리스티앙 마르코스 아르나이<br>
+          서울특별시 강남구 영동대로 517(삼성동) 아셈타워32층<br>
+          고객센터 : 080-022-3332
+        </address>
+        <p>Copyright&copy;biotherm All rights reserved.</p>
+        <ul class="ft_icon">
+          <li>
+            <a href=""><img src="../assets/images/icon/ft_1_youtube.svg" alt="원 안의 둥근 네모 안에 삼각형 재생 버튼 모양">
+            </a>
+          </li>
+          <li>
+            <a href=""><img src="../assets/images/icon/ft_2_facebook.svg" alt="원 안의 f 글자">
+            </a>
+          </li>
+          <li>
+            <a href=""><img src="../assets/images/icon/ft_3_instagram.svg" alt="원 안의 카메라 모양">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+</body>
+
+</html>
