@@ -288,5 +288,37 @@ h4{font-size: 22.2222vw; color: #ffffff; -webkit-text-stroke: 0.2778vw #707070;}
     .story_main {height: auto;}
 }
 
-//MENU 스타일
+// skin 메뉴
 
+#product_menu {
+    margin-top: 51px; width: 100%;
+    h2{display: inline-block; width: 39%; padding: 0 5%;  height: 60px;text-align: center;
+        a{display: block; font-size: 20px;font-weight: 400; line-height: 60px;}
+    
+    }
+    .menu_body{color: $grey;}
+}
+#skin{
+    position: relative; width: 100%; height: 100%;
+    &::before{content: ""; position: absolute; top: -5px;left: 0; width: 100%; height: 1px; background-color:#f8f8f8;}
+    &::after{content: ""; position: absolute; top: 55px;left: 0; width: 100%; height: 1px; background-color:#f8f8f8;}
+    
+    .dep1_skin{ text-align: center; padding: 0 30px; color: $grey; font-size: 14px; margin-top: 5px;
+    .essence_on{color: $navy;}
+    >li{display: inline-block; line-height: 25px; 
+    +li{margin-left: 13px;}
+    }
+}
+
+    .dep2_essence{
+        padding: 0 30px;  height: 100%;
+        display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start; margin-top: 10px;
+    li{ width: 135px;height: 230px;margin-top: 15px;
+        a{ display: block; font-size: 14px;
+            img{ display: block; @include radius(2em); @include boxshadow(0.8333vw 0.8333vw 1.6667vw rgba(0, 0, 0, .15)); }
+            strong{ display: block; font-weight: 400;margin-top: 20px; text-align: center;}
+        }
+        &:nth-child(even){margin-left: 30px;}
+    }
+    }
+}
