@@ -139,7 +139,7 @@ body{font-family: NtSans; font-weight: 400;color: $navy; font-size: 4.444444444v
     width: 77.7778vw;
     img{display: block; margin-top: 13.8889vw;}
     >ul {padding-top: 13.8889vw;}
-        li a{display: block;position: relative;top: 0;left: 0; font-family: adam; font-weight: 500;font-size: 6.9444vw; letter-spacing: -10;padding: 0 8.3333vw;}
+        li a{display: block;position: relative;top: 0;left: 0; font-family: adam; font-weight: 500;font-size: 6.9444vw; letter-spacing: normal;padding: 0 8.3333vw;}
         li+li{margin-top: 11.1111vw;}
         .gnb2>a::before,.gnb2>a::after {content: ""; position: absolute;  top: calc(50%); right:8.3333vw; background: $navy; width: 6.9444vw;height: 0.2778vw;}
         .gnb2>a::after{@include transform(rotate(90deg));@include transition(all 0.3s);}

@@ -205,7 +205,7 @@ body {
     font-family: adam;
     font-weight: 500;
     font-size: 6.9444vw;
-    letter-spacing: -10;
+    letter-spacing: normal;
     padding: 0 8.3333vw; }
   #gnb li + li {
     margin-top: 11.1111vw; }
